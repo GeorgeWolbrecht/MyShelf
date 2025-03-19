@@ -6,6 +6,7 @@
     [UserPassword]     VARCHAR (100) NOT NULL,
     [LastLoginTime]    DATETIME      NULL,
     [AccountTypeID]    INT           NOT NULL,
+    [UserEmail]        VARCHAR (200) NULL,
     CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED ([UserID] ASC),
     CONSTRAINT [FK_User_AccountType] FOREIGN KEY ([AccountTypeID]) REFERENCES [dbo].[AccountType] ([AccountTypeID]) ON DELETE CASCADE
 );
